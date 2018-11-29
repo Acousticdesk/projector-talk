@@ -21,9 +21,6 @@ const styles = theme => ({
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
-  actions: {
-    display: 'flex',
-  },
   expand: {
     transform: 'rotate(0deg)',
     transition: theme.transitions.create('transform', {
@@ -45,11 +42,6 @@ const styles = theme => ({
 const RecipeReviewCard = ({ classes, src, name, description }) => (
   <Card className={classes.card}>
     <CardHeader
-      action={
-        <IconButton>
-          <MoreVertIcon />
-        </IconButton>
-      }
       title={name}
       subheader="December 1, 2018"
     />
@@ -59,18 +51,10 @@ const RecipeReviewCard = ({ classes, src, name, description }) => (
       title={name}
     />
     <CardContent>
-      <Typography component="p">
+      <Typography className="dish-description" component="p">
         { description || 'There is no description for the dish yet...' }
       </Typography>
     </CardContent>
-    <CardActions className={classes.actions} disableActionSpacing>
-      <IconButton aria-label="Add to favorites">
-        <FavoriteIcon />
-      </IconButton>
-      <IconButton aria-label="Share">
-        <ShareIcon />
-      </IconButton>
-    </CardActions>
   </Card>
 )
 

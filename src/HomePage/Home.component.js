@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Grid from '@material-ui/core/Grid'
-import MediaCard from '../MediaCard/MediaCard.component'
+import MediaCard from './MediaCard/MediaCard.component'
 import Navigation from './Navigation.component'
 
 import './Home.styles.css'

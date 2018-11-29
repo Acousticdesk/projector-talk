@@ -9,7 +9,8 @@ import dishes from './Dishes.data'
 import './Dishes.styles.css'
 
 export default ({ isLoggedIn }) => (
-  <div className="container dishes-container">
+  <div className="container dishes-container consistency__dishes-section">
+    <h2 className="consistency__dishes-heading">Dishes crafted with ❤️ for {!isLoggedIn ? 'you' : 'Projector students'}:</h2>
     <Grid container spacing={40}>
       {
         isLoggedIn

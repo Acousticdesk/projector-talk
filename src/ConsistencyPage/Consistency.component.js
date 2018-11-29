@@ -8,8 +8,10 @@ import MenuIcon from '@material-ui/icons/Menu'
 
 import UserInfo from './UserInfo.component'
 import Dishes from './Dishes.component'
+import About from './About.component'
+import Order from './Order.component'
 
-import './Consistency.styles.css'
+import './Consistency.styles.scss'
 
 const styles = {
   root: {
@@ -53,7 +55,7 @@ class ButtonAppBar extends PureComponent {
                   <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" color="inherit" className={classes.grow}>
-                  News
+                  NiceFoods
                 </Typography>
                 <UserInfo
                   isLoggedIn={isLoggedIn}
@@ -65,13 +67,13 @@ class ButtonAppBar extends PureComponent {
             <Dishes isLoggedIn={isLoggedIn} />
           </div>
         </div>
-        <footer>
-          <UserInfo
-            isLoggedIn={isLoggedIn}
-            handleLogoutClick={this.handleLogoutClick}
-            handleLoginClick={this.handleLoginClick}
-          />
-        </footer>
+        {/*<footer>*/}
+          {/*<UserInfo*/}
+            {/*isLoggedIn={isLoggedIn}*/}
+            {/*handleLogoutClick={this.handleLogoutClick}*/}
+            {/*handleLoginClick={this.handleLoginClick}*/}
+          {/*/>*/}
+        {/*</footer>*/}
       </>
     )
   }

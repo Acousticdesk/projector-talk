@@ -79,9 +79,6 @@ class SimpleCard extends PureComponent {
           </Typography>
         </CardContent>
         <CardActions>
-          <IconButton>
-
-          </IconButton>
           <Button size="small">Learn More</Button>
         </CardActions>
       </Card>

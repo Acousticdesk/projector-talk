@@ -1,0 +1,49 @@
+// Font size
+$font-size--large: 36px;
+$font-size--md: 16px;
+$font-size--small: 16px;
+
+// Section offsets
+$section-offset: 25px;
+
+.content {
+    min-height: calc(100vh - 50px);
+}
+
+footer {
+    display: flex;
+    height: 70px;
+    justify-content: flex-end;
+    background: #3f51b5;
+    align-items: center;
+    color: #fff;
+    padding: 0 24px;
+}
+
+// ----- Dishes
+
+.consistency__dishes-heading {
+    font-size: 24px;
+}
+
+.consistency__dishes-section {
+    margin-top: 20px;
+}
+
+p.dish-description {
+    font-size: 10px;
+}
+
+// ----- Order
+
+.consistency__order-heading {
+    font-size: 24px;
+}
+
+.consistency__order-section {
+    margin-top: 20px;
+}
+
+.consistency__order {
+    font-size: 10px;
+}
