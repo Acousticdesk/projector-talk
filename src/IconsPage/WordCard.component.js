@@ -80,9 +80,7 @@ class SimpleCard extends PureComponent {
         </CardContent>
         <CardActions>
           <IconButton>
-            <i style={{fontSize: 32}} className={`material-icons heart-icon ${isLiked ? 'liked' : ''}`}>
-              favorite
-            </i>
+
           </IconButton>
           <Button size="small">Learn More</Button>
         </CardActions>
