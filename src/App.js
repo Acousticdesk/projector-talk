@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import HomePage from './HomePage/Home.component'
 import ConsistencyPage from './ConsistencyPage/Consistency.component'
+import IconsPage from './IconsPage/Icons.component'
 
 import './App.css'
 
@@ -11,6 +12,7 @@ const App = () => (
     <Switch>
       <Route path="/" exact component={HomePage} />
       <Route path="/consistency" component={ConsistencyPage} />
+      <Route path="/icons" component={IconsPage} />
     </Switch>
   </Router>
 )
