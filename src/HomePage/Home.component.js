@@ -7,7 +7,7 @@ import Navigation from './Navigation.component'
 import './Home.styles.css'
 
 export default () => (
-  <>
+  <div className="container">
     <h1>Continue watching:</h1>
     <Grid
       container
@@ -35,5 +35,5 @@ export default () => (
       </Grid>
     </Grid>
     <Navigation />
-  </>
+  </div>
 )
