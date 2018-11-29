@@ -3,12 +3,13 @@ import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
 import UserInfo from './UserInfo.component'
 import Dishes from './Dishes.component'
+
+import './Consistency.styles.css'
 
 const styles = {
   root: {
@@ -43,24 +44,35 @@ class ButtonAppBar extends PureComponent {
     const { isLoggedIn } = this.state
 
     return (
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" color="inherit" className={classes.grow}>
-              News
-            </Typography>
-            {
-              !isLoggedIn
-                ? <Button onClick={this.handleLoginClick} color="inherit">Login</Button>
-                : <UserInfo handleLogoutClick={this.handleLogoutClick} />
-            }
-          </Toolbar>
-        </AppBar>
-        <Dishes isLoggedIn={isLoggedIn} />
-      </div>
+      <>
+        <div className="content">
+          <div className={classes.root}>
+            <AppBar position="static">
+              <Toolbar>
+                <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+                  <MenuIcon />
+                </IconButton>
+                <Typography variant="h6" color="inherit" className={classes.grow}>
+                  News
+                </Typography>
+                <UserInfo
+                  isLoggedIn={isLoggedIn}
+                  handleLogoutClick={this.handleLogoutClick}
+                  handleLoginClick={this.handleLoginClick}
+                />
+              </Toolbar>
+            </AppBar>
+            <Dishes isLoggedIn={isLoggedIn} />
+          </div>
+        </div>
+        <footer>
+          <UserInfo
+            isLoggedIn={isLoggedIn}
+            handleLogoutClick={this.handleLogoutClick}
+            handleLoginClick={this.handleLoginClick}
+          />
+        </footer>
+      </>
     )
   }
 }

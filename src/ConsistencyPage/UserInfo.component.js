@@ -9,14 +9,23 @@ import deepOrange from '@material-ui/core/colors/deepOrange'
 const styles = {
   avatar: {
     backgroundColor: deepOrange[500],
-    marginRight: 10
+    marginRight: 10,
+    display: 'inline-flex',
   }
 }
 
-const UserInfo = ({ classes, handleLogoutClick }) => (
+const UserInfo = ({ classes, isLoggedIn, handleLogoutClick, handleLoginClick, classNames }) => (
   <>
-    <Avatar className={classes.avatar}>AK</Avatar>
-    <Button onClick={handleLogoutClick} color="inherit">Logout</Button>
+    {
+      !isLoggedIn
+        ? <Button onClick={handleLoginClick} color="inherit">Login</Button>
+        : (
+          <>
+            <Avatar className={classes.avatar}>AK</Avatar>
+            <Button onClick={handleLogoutClick} color="inherit">Logout</Button>
+          </>
+      )
+    }
   </>
 )
 

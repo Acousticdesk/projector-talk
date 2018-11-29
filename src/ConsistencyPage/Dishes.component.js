@@ -14,7 +14,7 @@ export default ({ isLoggedIn }) => (
       {
         isLoggedIn
           ? dishes.map(dish => (
-            <Grid item>
+            <Grid xs={3} item>
               <DishCard
                 src={dish.src}
                 name={dish.name}
@@ -23,7 +23,7 @@ export default ({ isLoggedIn }) => (
             </Grid>
           ))
           : dishes.map(dish => dish.discount ? null : (
-            <Grid item>
+            <Grid xs={3} item>
               <DishCard
                 src={dish.src}
                 name={dish.name}
