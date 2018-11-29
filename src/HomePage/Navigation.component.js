@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button'
 
 export default () => (
   <div className="home-btn-container">
-    <Link to="/Consistency">
+    <Link to="/consistency">
       <Button
         variant="contained"
       >
