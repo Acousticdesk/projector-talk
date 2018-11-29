@@ -37,7 +37,7 @@ class MediaCard extends PureComponent {
     this.setState({ isPlaying: true })
   }
   render() {
-    const { classes, theme, title, subtitle, cover } = this.props
+    const { classes, theme, title, cover } = this.props
     const { episode, isPlaying } = this.state
 
     return (
@@ -48,7 +48,7 @@ class MediaCard extends PureComponent {
               { title }
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">
-              { subtitle }
+              by Netflix
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">
               {
@@ -76,7 +76,7 @@ class MediaCard extends PureComponent {
         <CardMedia
           className={classes.cover}
           image={cover}
-          title="Live from space album cover"
+          title={`${title} series cover`}
         />
       </Card>
     )
