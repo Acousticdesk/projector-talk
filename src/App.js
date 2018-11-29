@@ -1,28 +1,38 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Grid from '@material-ui/core/Grid'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+import MediaCard from './MediaCard/MediaCard.component'
 
-export default App;
+import './App.css'
+
+const App = () => (
+  <div className="container">
+    <Grid
+      container
+      spacing={40}
+    >
+      <Grid
+        item
+        xs={6}
+      >
+        <MediaCard
+          title="Norsemen"
+          subtitle="by Netflix"
+          cover="https://nypdecider.files.wordpress.com/2017/08/norsemen.png?w=646&h=431&crop=1"
+        />
+      </Grid>
+      <Grid
+        item
+        xs={6}
+      >
+        <MediaCard
+          title="Narcos"
+          subtitle="by Netflix"
+          cover="https://occ-0-987-990.1.nflxso.net/art/eb3bf/f0c7a05129d5611390af4a9f41fbf136bdeeb3bf.jpg"
+        />
+      </Grid>
+    </Grid>
+  </div>
+)
+
+export default App
