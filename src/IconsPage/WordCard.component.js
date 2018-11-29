@@ -79,7 +79,14 @@ class SimpleCard extends PureComponent {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small">
+            <a
+              href="https://translate.google.com/m/translate?source=osdd#view=home&op=translate&sl=auto&tl=ru&text=benevolent"
+              target="_blank"
+            >
+              Learn More
+            </a>
+          </Button>
         </CardActions>
       </Card>
     );
